@@ -1,0 +1,28 @@
+INSERT INTO menus (id, text, icon_cls, class_name, menu_id)
+VALUES (1, 'Security', 'fas fa-users-cog', NULL, NULL),
+       (2, 'Groups and Permissions', 'fas fa-user-secret', 'grouppermission', 1),
+       (3, 'Users', 'fa fa-users', 'user', 1),
+       (4, 'Static Data', 'fa fa-database fa-lg', NULL, NULL),
+       (5, 'Actors', 'fas fa-star', 'actorsgrid', 4),
+       (6, 'Categories', 'fas fa-sun', 'categoriesgrid', 4),
+       (7, 'Languages', 'fa fa-language', 'languagesgrid', 4),
+       (8, 'Cities', 'fas fa-praying-hands', 'citiesgrid', 4),
+       (9, 'Countries', 'fas fa-globe-asia', 'countriesgrid', 4),
+       (10, 'Content Management', 'fa fa-film fa-lg', NULL, NULL),
+       (11, 'Films', 'fas fa-film', 'films', 10),
+       (12, 'Reports', 'fas fa-chart-line', NULL, NULL),
+       (13, 'Sales by Film Category', 'fas fa-chart-pie', 'salesfilmcategory', 12);
+INSERT INTO permissions (menu_id, group_id)
+VALUES (1, 1),
+       (2, 1),
+       (3, 1),
+       (4, 1),
+       (5, 1),
+       (6, 1),
+       (7, 1),
+       (8, 1),
+       (9, 1),
+       (10, 1),
+       (11, 1),
+       (12, 1),
+       (13, 1);

@@ -1,0 +1,23 @@
+
+server:
+  port: 8080
+  forward-headers-strategy: framework
+spring:
+  application:
+    name: sakila-app-jpa
+  flyway:
+    locations: classpath:db/mysql/migrations
+    validate-on-migrate: true
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:sakilajpa}
+    password: ${DB_PASSWD:generic}
+    user: ${DB_USERNAME:root}
+    baseline-on-migrate: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:sakilajpa}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWD:generic}
+
