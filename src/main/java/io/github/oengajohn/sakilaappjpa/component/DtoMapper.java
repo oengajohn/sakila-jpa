@@ -55,9 +55,9 @@ public class DtoMapper {
     public static FilmDto mapToFilmDto(Film source) {
         var target = new FilmDto();
         BeanUtils.copyProperties(source, target);
-        target.setLanguageId(source.getLanguage().getId());
+        target.setLanguageId(source.getLanguage().getLanguageId());
         Language originalLanguage = source.getOriginalLanguage();
-        target.setOriginalLanguageId(originalLanguage!=null ? originalLanguage.getId():null);
+        target.setOriginalLanguageId(originalLanguage!=null ? originalLanguage.getLanguageId():null);
         return target;
     }
     public static Category mapToCategoryEntity(CategoryDto source) {
@@ -99,7 +99,7 @@ public class DtoMapper {
         var target = new CityDto();
         BeanUtils.copyProperties(source,target);
         Country country = source.getCountry();
-        target.setCountryId(country.getId());
+        target.setCountryId(country.getCountryId());
         target.setCountry(mapToCountryDto(country));
         return target;
     }

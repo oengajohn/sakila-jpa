@@ -37,8 +37,8 @@ public class FilmServiceImpl implements FilmService {
                 page.getContent().stream()
                         .map(DtoMapper::mapToFilmDto)
                         .peek(filmDto -> {
-                            filmDto.setCategories(categoryService.findCategoriesByFilmId(filmDto.getId()));
-                            filmDto.setActors(actorService.findActorsByFilmId(filmDto.getId()));
+                            filmDto.setCategories(categoryService.findCategoriesByFilmId(filmDto.getFilmId()));
+                            filmDto.setActors(actorService.findActorsByFilmId(filmDto.getFilmId()));
                         })
                         .collect(Collectors.toList()),
                 page.getPageable(),
@@ -63,8 +63,8 @@ public class FilmServiceImpl implements FilmService {
                 page.getContent().stream()
                         .map(DtoMapper::mapToFilmDto)
                         .peek(filmDto -> {
-                            filmDto.setCategories(categoryService.findCategoriesByFilmId(filmDto.getId()));
-                            filmDto.setActors(actorService.findActorsByFilmId(filmDto.getId()));
+                            filmDto.setCategories(categoryService.findCategoriesByFilmId(filmDto.getFilmId()));
+                            filmDto.setActors(actorService.findActorsByFilmId(filmDto.getFilmId()));
                         })
                         .collect(Collectors.toList()),
                 page.getPageable(),

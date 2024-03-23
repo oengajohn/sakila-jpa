@@ -20,7 +20,7 @@ import java.time.Instant;
 public class Customer {
     @Id
     @Column(name = "customer_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer customerId;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

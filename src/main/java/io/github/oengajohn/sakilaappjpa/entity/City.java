@@ -19,7 +19,7 @@ import java.time.Instant;
 public class City {
     @Id
     @Column(name = "city_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer cityId;
 
     @Size(max = 50)
     @NotNull

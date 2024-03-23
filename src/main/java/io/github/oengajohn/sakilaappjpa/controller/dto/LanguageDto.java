@@ -18,7 +18,7 @@ import java.time.Instant;
 @ToString
 @Builder
 public class LanguageDto implements Serializable {
-    private Short id;
+    private Short languageId;
     @NotNull
     @Size(max = 20)
     private String name;

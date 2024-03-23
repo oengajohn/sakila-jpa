@@ -19,7 +19,7 @@ import java.time.Instant;
 public class Inventory {
     @Id
     @Column(name = "inventory_id", nullable = false)
-    private Integer id;
+    private Integer inventoryId;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

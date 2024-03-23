@@ -21,7 +21,7 @@ import java.time.Instant;
 public class Store {
     @Id
     @Column(name = "store_id", columnDefinition = "tinyint UNSIGNED")
-    private Short id;
+    private Short storeId;
 
     @NotNull
     @OneToOne(fetch = FetchType.LAZY, optional = false)

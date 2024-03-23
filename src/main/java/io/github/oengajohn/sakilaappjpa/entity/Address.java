@@ -21,7 +21,7 @@ import java.time.Instant;
 public class Address {
     @Id
     @Column(name = "address_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer addressId;
 
     @Size(max = 50)
     @NotNull

@@ -22,7 +22,7 @@ import java.time.Instant;
 public class Film {
     @Id
     @Column(name = "film_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer filmId;
 
     @Size(max = 128)
     @NotNull

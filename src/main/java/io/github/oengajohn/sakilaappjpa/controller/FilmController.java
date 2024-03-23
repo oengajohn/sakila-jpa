@@ -3,15 +3,14 @@ package io.github.oengajohn.sakilaappjpa.controller;
 import io.github.oengajohn.sakilaappjpa.controller.dto.FilmDto;
 import io.github.oengajohn.sakilaappjpa.controller.dto.GenericResponse;
 import io.github.oengajohn.sakilaappjpa.service.FilmService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("api/film")
+@Slf4j
 public class FilmController {
 
     private final FilmService filmService;
@@ -26,6 +25,7 @@ public class FilmController {
                                                @RequestParam( value = "limit", defaultValue = "10") int limit
                                                 ){
         var filmDtoPage= filmService.listFilms(start, limit);
+
         return GenericResponse.success(
                 filmDtoPage.getContent(),
                 filmDtoPage.getTotalElements()
@@ -41,4 +41,10 @@ public class FilmController {
                 filmDtoPage.getTotalElements()
         );
     }
+    @PostMapping("saveOrUpdate")
+    public GenericResponse<String> saveOrUpdate(@RequestBody String string){
+        log.info(string);
+        return GenericResponse.success("test");
+    }
+
 }

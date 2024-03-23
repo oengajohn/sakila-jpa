@@ -19,7 +19,7 @@ import java.time.Instant;
 public class Actor {
     @Id
     @Column(name = "actor_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer actorId;
 
     @Size(max = 45)
     @NotNull

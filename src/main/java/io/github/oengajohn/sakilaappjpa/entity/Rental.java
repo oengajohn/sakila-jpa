@@ -21,7 +21,7 @@ import java.time.Instant;
 public class Rental {
     @Id
     @Column(name = "rental_id", nullable = false)
-    private Integer id;
+    private Integer rentalId;
 
     @NotNull
     @Column(name = "rental_date", nullable = false)

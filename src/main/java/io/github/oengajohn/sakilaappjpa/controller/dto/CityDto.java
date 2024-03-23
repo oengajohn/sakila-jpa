@@ -18,7 +18,7 @@ import java.time.Instant;
 @ToString
 @Builder
 public class CityDto implements Serializable {
-    private Integer id;
+    private Integer cityId;
     @NotNull
     @Size(max = 50)
     private String city;

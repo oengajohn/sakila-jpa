@@ -17,7 +17,7 @@ import lombok.*;
 public class FilmText {
     @Id
     @Column(name = "film_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer filmId;
 
     @Size(max = 255)
     @NotNull

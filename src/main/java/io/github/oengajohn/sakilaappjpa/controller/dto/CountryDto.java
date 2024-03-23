@@ -18,7 +18,7 @@ import java.time.Instant;
 @ToString
 @Builder
 public class CountryDto implements Serializable {
-    private Integer id;
+    private Integer countryId;
     @NotNull
     @Size(max = 50)
     private String country;

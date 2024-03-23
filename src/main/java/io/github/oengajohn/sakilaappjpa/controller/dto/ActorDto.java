@@ -19,7 +19,8 @@ import java.time.Instant;
 @Builder
 public class ActorDto implements Serializable {
 
-    Integer id;
+    private Integer actorId;
+
     @NotNull
     @Size(max = 45)
     String firstName;

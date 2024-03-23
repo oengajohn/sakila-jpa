@@ -20,7 +20,7 @@ import java.time.Instant;
 public class Staff {
     @Id
     @Column(name = "staff_id", columnDefinition = "tinyint UNSIGNED ")
-    private Short id;
+    private Short staffId;
 
     @Size(max = 45)
     @NotNull

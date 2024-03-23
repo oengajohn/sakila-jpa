@@ -17,7 +17,7 @@ import java.time.Instant;
 public class Category {
     @Id
     @Column(name = "category_id", columnDefinition = "tinyint UNSIGNED")
-    private Short id;
+    private Short categoryId;
 
     @Size(max = 25)
     @NotNull

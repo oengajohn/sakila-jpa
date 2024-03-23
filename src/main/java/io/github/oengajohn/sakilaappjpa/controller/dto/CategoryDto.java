@@ -18,7 +18,7 @@ import java.time.Instant;
 @ToString
 @Builder
 public class CategoryDto implements Serializable {
-    Short id;
+    Short categoryId;
     @NotNull
     @Size(max = 25)
     String name;

@@ -20,7 +20,7 @@ import java.time.Instant;
 public class Language {
     @Id
     @Column(name = "language_id", columnDefinition = "tinyint UNSIGNED")
-    private Short id;
+    private Short languageId;
 
     @Size(max = 20)
     @NotNull

@@ -20,7 +20,7 @@ import java.util.List;
 @ToString
 @Builder
 public class FilmDto implements Serializable {
-    private Integer id;
+    private Integer filmId;
     @NotNull
     @Size(max = 128)
     private String title;

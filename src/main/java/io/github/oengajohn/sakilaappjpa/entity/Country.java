@@ -17,7 +17,7 @@ import java.time.Instant;
 public class Country {
     @Id
     @Column(name = "country_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer countryId;
 
     @Size(max = 50)
     @NotNull

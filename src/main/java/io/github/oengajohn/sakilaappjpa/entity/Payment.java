@@ -23,7 +23,7 @@ import java.time.Instant;
 public class Payment {
     @Id
     @Column(name = "payment_id", columnDefinition = "smallint UNSIGNED")
-    private Integer id;
+    private Integer paymentId;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
